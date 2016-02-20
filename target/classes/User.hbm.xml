@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.davidscompany.mainGroup.Sophia.User" table="users">
+      <meta attribute="class-description">
+         This class contains the user detail. 
+      </meta>
+      <id name="userID" type="int" column="userID">
+         <generator class="native"/>
+      </id>
+      <property name="userName" column="userName" type="string"/>
+      <property name="userPassword" column="userPassword" type="string"/>
+   </class>
+</hibernate-mapping>

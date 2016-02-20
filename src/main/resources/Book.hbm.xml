@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.davidscompany.mainGroup.Sophia.Book" table="books">
+      <meta attribute="class-description">
+         This class contains the book detail. 
+      </meta>
+      <id name="bookID" type="int" column="bookID">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="name" type="string"/>
+      <property name="author" column="author" type="string"/>
+      <property name="category" column="category" type="string"/>
+      <property name="description" column="description" type="string"/>
+      <property name="imageURL" column="imageURL" type="string"/>
+       <property name="userID" column="userID" type="int"/>
+   </class>
+</hibernate-mapping>

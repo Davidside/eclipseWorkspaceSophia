@@ -1,0 +1,84 @@
+<html lang="cs">
+<head>
+	<title>Sophia</title>
+	<meta charset="UTF-8">
+	<link href="styleSophia.css" rel="stylesheet" />
+</head>
+<body>
+<div id="container">
+	<div id="header"><h1>Sophia</h1></div>
+	<div id="content">
+		<div id="main">
+			<form wicket:id="form" id="formBookAdd">
+				<h3>Přidat knihu</h3>
+				<a wicket:id="friendsLink" id="friendsLink" href="#">FRIENDS</a>
+					<table>
+						<tr>
+							<th>Název knihy</th>
+							<td>
+								<input wicket:id="name" type="text" size="30"/>
+							</td>
+						</tr>
+						<tr>
+							<th>Autor knihy</th>
+							<td>
+								<input wicket:id="author" type="text" size="30"/>
+							</td>
+						</tr>
+						<tr>
+							<th>Kategorie</th>
+							<td>
+								<select wicket:id="category" size="1">
+									<option>Option 1</option><option>Option 2</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>Obrázek knihy (URL)</th>
+							<td>
+								<input wicket:id="imageURL" type="text" size="30"/>
+							</td>
+						</tr>
+							<tr>
+							<th>Stučný popis knihy</th>
+							<td>
+								<textarea wicket:id="description" rows="5" cols="20"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>&nbsp;</th>
+							<td>
+								<input type="submit" wicket:id="submit" value="Vložit knihu" />
+							</td>
+						</tr>
+						
+					</table>
+		
+			</form>
+			
+			<p wicket:id="message" id="message">Kniha vložena</p>
+			<div wicket:id="feedback" class="feedback"></div>
+			
+			<div wicket:id="booklist" class="book">
+				<div class="bookNameContainer">
+					<a wicket:id="remove" class="removeButton" href="#" onclick="return confirm('Opravdu chcete tuto knihu odebrat?')">REMOVE</a>
+					<a wicket:id="edit" class="editButton" href="#">EDIT</a>
+					<h3 wicket:id="nameBook" class="bookName">Název knihy</h3>
+				</div>
+				<div class="bookInfo">
+					<div class="bookImageContainer">
+						<img wicket:id="bookImage" class="bookImage" src="/img/sophiaBook.jpg">
+					</div>
+					<div class="bookText">
+						<p wicket:id="authorBook" class="author">Autor</p>
+						<p wicket:id="categoryBook" class="category">Kategorie</p>
+						<p wicket:id="descriptionBook" class="description">Popis knihy</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

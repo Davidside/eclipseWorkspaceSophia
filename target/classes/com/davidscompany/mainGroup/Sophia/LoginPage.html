@@ -1,0 +1,41 @@
+<html lang="cs">
+<head>
+	<title>Sophia</title>
+	<meta charset="UTF-8">
+	<link href="styleSophia.css" rel="stylesheet" />
+</head>
+
+
+
+<body>
+<div id="container">
+	<div id="header"><h1>Sophia</h1></div>
+	<div id="content">
+		<div id="mainLogin">
+			<form wicket:id="form" id="loginForm">
+				<div id="loginLine">
+			  		<span id="nameMessage">Jméno:</span>
+			  		<input wicket:id="nameField" id="nameField" type="text" />
+			  		<span id="passwordMessage">Heslo:</span>
+			  		<input wicket:id="passwordField" id="passwordField" type="password" />
+					<input wicket:id="loginButton" id="loginButton" type="submit" value="Přihlásit se" />
+				</div>
+				<div id="registerLine">
+					<span wicket:id="registerMessage" id="registerMessage">Heslo znovu:</span>
+					<input wicket:id="passwordAgainField" id="passwordAgainField" type="password" name="passwordAgain" />
+					<input wicket:id="registerButton" id="registerButton" type="submit" value="Registrovat se" />
+				</div>
+				<div style="display:none">
+					<input wicket:id="hashedPassword" type="password" id="hashedPassword" />
+					<input wicket:id="hashedPasswordAgain" type="password" id="hashedPasswordAgain" />
+				</div>
+			</form>
+			<div id="feedbackMessages"> 
+				<p wicket:id="message" id="loginMessage">information about failed login</p>
+				<div wicket:id="feedback"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

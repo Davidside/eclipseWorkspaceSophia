@@ -1,0 +1,52 @@
+<html lang="cs">
+<head>
+	<title>Sophia</title>
+	<meta charset="UTF-8">
+	<link href="styleSophia.css" rel="stylesheet" />
+</head>
+<body>
+
+	<div id="container">
+		<div id="header"><h1>Sophia</h1></div>
+		<div id="content">
+			<div id="main">
+			
+				<form wicket:id="formSelectFriend" id="formSelectFriend">
+					<h3>Zobrazit seznam knih přátel</h3>
+					<a wicket:id="backLink" id="backLink" href="#">ZPĚT</a>
+					<select wicket:id="friendsChoice" size="1">
+						<option>Option 1</option><option>Option 2</option>
+					</select>
+					<input wicket:id="submit" type="submit" value="Zobrazit seznam" />
+				</form>
+				
+				<p wicket:id="message" id="message">Vyberte ze seznamu uživatele.</p>
+				
+				<div wicket:id="booklist" class="book">
+				
+					<div class="bookNameContainer">
+						<h3 wicket:id="nameBook" class="bookName">Název knihy</h3>
+					</div>
+					
+					<div class="bookInfo">
+					
+						<div class="bookImageContainer">
+							<img wicket:id="bookImage" class="bookImage" src="/img/sophiaBook.jpg">
+						</div>
+						
+						<div class="bookText">
+							<p wicket:id="authorBook" class="author">Autor</p>
+							<p wicket:id="categoryBook" class="category">Kategorie</p>
+							<p wicket:id="descriptionBook" class="description">Popis knihy</p>
+						</div>
+					</div> <!-- bookInfo -->
+				</div> <!-- book -->
+			
+			
+			</div> <!-- main -->
+			
+		</div> <!-- content -->
+		
+	</div> <!-- container -->
+</body>
+</html>
