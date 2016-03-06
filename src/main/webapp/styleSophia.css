@@ -163,6 +163,8 @@ select {
 .bookImage {
 	height : 100%;
 	width : 100%;
+	background:url(img/sophiaBook.jpg) center no-repeat;
+	background-size: contain;
 }
 .bookText {
 	position : absolute;
